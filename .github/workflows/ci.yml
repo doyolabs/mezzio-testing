@@ -131,7 +131,7 @@ jobs:
       matrix:
         php:
           - '7.4'
-          - '8.0'
+          #- '8.0'
         include:
           - php: '7.4'
             coverage: true
