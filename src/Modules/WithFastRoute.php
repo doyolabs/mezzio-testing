@@ -13,12 +13,16 @@ declare(strict_types=1);
 
 namespace Doyo\Mezzio\Testing\Modules;
 
-use Mezzio\Router\FastRouteRouter\ConfigProvider;
+use Doyo\Mezzio\Testing\Tests\Exception\FastRouteException;
 
 trait WithFastRoute
 {
     public static function configureFastRoute(): void
     {
-        static::addConfigProvider(ConfigProvider::class);
+        $class = 'Mezzio\Router\FastRouteRouter\ConfigProvider';
+        if ( ! class_exists($class)) {
+            FastRouteException::fastRouteNotInstalled();
+        }
+        static::addConfigProvider($class);
     }
 }
