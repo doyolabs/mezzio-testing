@@ -1,0 +1,52 @@
+{
+    "name": "toni/php-repo-template",
+    "description": "PHP Project Template",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthonius Munthi",
+            "homepage": "https://itstoni.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "Template\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Template\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse",
+        "psalm": "psalm --shepherd --stats",
+        "test": "phpunit",
+        "coverage-text": "@test --coverage-text",
+        "csf": "php-cs-fixer",
+        "cs-fix": "@csf -- fix",
+        "check": [
+            "php-cs-fixer fix --dry-run",
+            "@psalm",
+            "@phpstan",
+            "@test"
+        ]
+    },
+    "require": {
+        "php": "^7.4 || ^8.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.17",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpstan/phpstan": "^0.12.59",
+        "phpstan/phpstan-phpunit": "^0.12.16",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.15.0",
+        "vimeo/psalm": "^4.3"
+    }
+}
