@@ -6,7 +6,7 @@
     </include>
   </coverage>
   <testsuites>
-    <testsuite name="Template Test Suite">
+    <testsuite name="Mezzio Testing Test Suite">
       <directory suffix="Test.php">./tests</directory>
     </testsuite>
   </testsuites>

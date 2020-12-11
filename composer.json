@@ -1,7 +1,7 @@
 {
-    "name": "toni/php-repo-template",
-    "description": "PHP Project Template",
-    "type": "project",
+    "name": "doyo/mezzio-testing",
+    "description": "Mezzio Testing Helper",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
@@ -15,12 +15,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Template\\": "src"
+            "Doyo\\Mezzio\\Testing\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Template\\Tests\\": "tests"
+            "Doyo\\Mezzio\\Testing\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -38,10 +38,17 @@
         ]
     },
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^7.4 || ^8.0",
+        "laminas/laminas-config-aggregator": "^1.4",
+        "mezzio/mezzio": "^3.2",
+        "mezzio/mezzio-helpers": "^5.4"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.17",
+        "laminas/laminas-diactoros": "^2.5",
+        "laminas/laminas-servicemanager": "^3.5",
+        "mezzio/mezzio-fastroute": "^3.0",
+        "mezzio/mezzio-router": "^3.2",
         "phpspec/prophecy-phpunit": "^2.0",
         "phpstan/phpstan": "^0.12.59",
         "phpstan/phpstan-phpunit": "^0.12.16",

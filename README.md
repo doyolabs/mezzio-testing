@@ -1,5 +1,7 @@
-Template Repository
+Mezzio Testing Helper
 ====
+
+Provides testing helper for Mezzio development.
 
 [![GitHub](https://img.shields.io/github/workflow/status/kilip/php-repo-template/CI?style=flat-square)](https://github.com/kilip/php-repo-template/actions?query=workflow%3ACI+branch%3Amaster)
 [![Codecov](https://img.shields.io/codecov/c/github/kilip/php-repo-template?style=flat-square)](https://codecov.io/gh/kilip/php-repo-template/branch/master)

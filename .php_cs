@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 $header = <<<'HEADER'
-This file is part of the Template project.
+This file is part of the doyo/mezzio-testing project.
 
 (c) Anthonius Munthi <https://itstoni.com>
 

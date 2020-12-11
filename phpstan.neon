@@ -7,3 +7,7 @@ parameters:
   earlyTerminatingMethodCalls:
     PHPUnit\Framework\Constraint\Constraint:
       - fail
+  ignoreErrors:
+    - message: "#Call to an undefined static method#"
+      paths:
+        - src/Modules/WithContainer.php
