@@ -25,6 +25,7 @@ trait WithLaminasServiceManager
         $deps                       = $config['dependencies'];
         $deps['services']['config'] = $config;
 
+        \assert(\is_array($deps));
         static::$container         = new ServiceManager($deps);
     }
 }
