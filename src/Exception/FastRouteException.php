@@ -11,7 +11,7 @@
 
 declare(strict_types=1);
 
-namespace Doyo\Mezzio\Testing\Tests\Exception;
+namespace Doyo\Mezzio\Testing\Exception;
 
 class FastRouteException extends \Exception
 {
