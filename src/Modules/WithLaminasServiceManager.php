@@ -17,12 +17,15 @@ use Laminas\ServiceManager\ServiceManager;
 
 trait WithLaminasServiceManager
 {
+    use WithContainer;
+
     protected static function setupServiceManager(): void
     {
         $config                     = static::$config;
         $deps                       = $config['dependencies'];
         $deps['services']['config'] = $config;
 
+        \assert(\is_array($deps));
         static::$container         = new ServiceManager($deps);
     }
 }

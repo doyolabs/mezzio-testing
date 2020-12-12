@@ -13,7 +13,6 @@ declare(strict_types=1);
 
 namespace Doyo\Mezzio\Testing\Tests\Modules;
 
-use Doyo\Mezzio\Testing\Modules\WithContainer;
 use Doyo\Mezzio\Testing\Modules\WithFastRoute;
 use Doyo\Mezzio\Testing\Modules\WithLaminasServiceManager;
 use Mezzio\Router\FastRouteRouter;
@@ -22,7 +21,6 @@ use PHPUnit\Framework\TestCase;
 
 class WithFastRouteTest extends TestCase
 {
-    use WithContainer;
     use WithFastRoute;
     use WithLaminasServiceManager;
 

@@ -13,8 +13,8 @@ declare(strict_types=1);
 
 namespace Doyo\Mezzio\Testing;
 
-use Doyo\Mezzio\Testing\Modules\WithContainer;
 use PHPUnit\Framework\TestCase as BaseTestCase;
+use Psr\Container\ContainerInterface;
 
 /**
  * Class TestCase.
@@ -23,7 +23,9 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
  */
 abstract class TestCase extends BaseTestCase
 {
-    use WithContainer;
+    protected static ?ContainerInterface $container = null;
+
+    abstract protected static function initialize(): void;
 
     public static function setUpBeforeClass(): void
     {

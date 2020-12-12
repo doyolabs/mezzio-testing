@@ -35,7 +35,9 @@ trait WithContainer
 
     protected static ?Application $app = null;
 
-    protected static array $config = [];
+    protected static array $config = [
+        'dependencies' => [],
+    ];
 
     protected static array $configProviders = [
         \Laminas\HttpHandlerRunner\ConfigProvider::class,
@@ -66,6 +68,10 @@ trait WithContainer
     protected static function initialize(): void
     {
         $uses = static::$uses = array_flip(static::getClassUses(static::class));
+
+        if (isset($uses[WithConfigurationFile::class])) {
+            static::loadConfigFromFile();
+        }
 
         if (isset($uses[WithFastRoute::class])) {
             static::configureFastRoute();
