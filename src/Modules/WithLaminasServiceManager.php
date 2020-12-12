@@ -17,6 +17,8 @@ use Laminas\ServiceManager\ServiceManager;
 
 trait WithLaminasServiceManager
 {
+    use WithContainer;
+
     protected static function setupServiceManager(): void
     {
         $config                     = static::$config;

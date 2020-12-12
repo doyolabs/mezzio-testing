@@ -15,7 +15,7 @@ namespace Doyo\Mezzio\Testing\Exception;
 
 class FastRouteException extends \Exception
 {
-    public static function fastRouteNotInstalled()
+    public static function fastRouteNotInstalled(): self
     {
         return new self(
             'Please install mezzio/mezzio-fastroute before using WithFastRoute trait.'

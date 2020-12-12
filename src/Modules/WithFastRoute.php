@@ -13,7 +13,7 @@ declare(strict_types=1);
 
 namespace Doyo\Mezzio\Testing\Modules;
 
-use Doyo\Mezzio\Testing\Tests\Exception\FastRouteException;
+use Doyo\Mezzio\Testing\Exception\FastRouteException;
 
 trait WithFastRoute
 {
