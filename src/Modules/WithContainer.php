@@ -169,7 +169,6 @@ trait WithContainer
         $traits = class_uses($trait);
 
         foreach ($traits as $trait) {
-            //$traits += static::traitUsesRecursive($trait);
             $traits = array_merge($traits, static::traitUsesRecursive($trait));
         }
 
